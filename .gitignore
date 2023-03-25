@@ -1,3 +1,4 @@
-
+scouting-data-files/**
+analysis/**
 /node_modules
 /package-lock.json

@@ -1,0 +1,32 @@
+{
+    "name": "VictiScout Compiler",
+    "version": "1.0.0",
+    "description": "Compiler for data collected with Team 1418's VictiScout app for FIRST Robotics Competition, designed originally for Team 1418.",
+    "main": "js/main.js",
+    "scripts": {
+        "start": "electron .",
+        "package-mac": "electron-packager . --platform=darwin --icon=images/logo/logo.icns --arch=all --out dist/ --overwrite",
+        "package-linux": "electron-packager . --platform=linux --icon=images/logo/logo.png --arch=all --out dist/ --overwrite",
+        "package-win": "electron-packager . --platform=win32 --icon=images/logo/logo.ico --arch=all --out dist/ --overwrite"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/frc1418/VictiScout"
+    },
+    "author": "frc1418",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/frc1418/VictiScout/issues"
+    },
+    "homepage": "https://github.com/frc1418/VictiScout#readme",
+    "devDependencies": {
+        "electron": "^22.1.0",
+        "electron-packager": "^17.1.1",
+        "os": "*"
+    },
+    "dependencies": {
+        "@abandonware/bleno": "git+https://github.com/BrandonWerbel/bleno.git",
+        "@abandonware/noble": "git+https://github.com/abandonware/noble.git",
+        "csv-parser": "^3.0.0"
+    }
+}

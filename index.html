@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Compiled VictiScout Data</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/loadjson.js"></script>
+    <script src="js/compile-sort.js"></script>
+    <script src="js/buttons.js"></script>
+</head>
+
+<body>
+    <div id="base">
+        <h1>Compiled VictiScout Data</h1>
+        <table id="table">
+            <tbody id="tbody">
+                <tr>
+                    <th>TEAM</th>
+                    <th>MATCH</th>
+                    <th>CONE T-M-L (A)</th>
+                    <th>CUBE T-M-L (A)</th>
+                    <th>LEAVE COMMUNITY (A)</th>
+                    <th>CHARGING DOCK (A)</th>
+                    <th>CONE T-M-L (T)</th>
+                    <th>CUBE T-M-L (T)</th>
+                    <th>CHARGING DOCK (T)</th>
+                </tr>
+            </tbody>
+        </table>
+        <div id="buttons">
+            <span class="button" id="com" onclick="react(this.id)">build</span>
+            <span class="button" id="loa" onclick="react(this.id)">display</span>
+            <span class="button" id="sdf" onclick="react(this.id)">data files</span>
+            <span><form><label for="fil" class="submit-file">upload</label>
+            <input id="fil" type="file" accept=".csv" onchange="react(this.id)" multiple/></form></span>
+        </div>
+    </div>
+    <div id="pop-backer" class="hidden" onclick="react(this.id)">
+        <div id="popup">
+            <p>Do you want to clear old files?</p>
+            <span class="button" id="ycl" onclick="react(this.id)">yes</span>
+            <span class="button" id="ncl" onclick="react(this.id)">no</span>
+        </div>
+    </div>
+</body>

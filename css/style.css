@@ -1,0 +1,110 @@
+table {
+    border-collapse: collapse;
+    width: 92%;
+    margin: auto;
+}
+  
+td, th {
+    border: 1px solid #FFF;
+    /* text-align: left; */
+    padding: 8px;
+}
+  
+tr:first-child {
+    background-color: #d12727;
+}
+
+tr {
+    background-color: #333;
+}
+
+.averaged:not(:first-child):nth-child(even) {
+    background-color: #111;
+}
+
+.averaged:not(:first-child):nth-child(odd) {
+    background-color: #222;
+}
+
+.averaged:not(:first-child):hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    border-style: ridge;
+    width: 6em;
+    padding: .4em;
+    margin: .5em;
+    margin-top: .85em;
+    border-color: #FFF;
+    background-color: #333;
+}
+
+.button:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+#buttons {
+    margin-top: .7em;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.submit-file {
+    background-color: #333;
+    border-style: ridge;
+    border-color: #FFF;
+    display: inline-block;
+    width: 6em;
+    padding: .4em;
+    margin: .5em;
+    cursor: pointer;
+}
+
+.submit-file:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+#popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-54.5%) translateY(-54.5%);
+    z-index: 0;
+    margin: 1em;
+    padding: 1em;
+    padding-bottom: 1.1em;
+    width: 20em;
+    border-style: ridge;
+    border-color: #FFF;
+    background-color: #333;
+}
+
+form {
+    display: inline-block;
+}
+
+#pop-backer {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(17, 17, 17, 0.484);
+    z-index: 1;
+}
+
+#base {
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}

@@ -8,7 +8,11 @@ if (!fs.existsSync(`${__dirname}/analysis`)) { fs.mkdirSync(`${__dirname}/analys
 
 async function compile() {
     const outputJson = {}
-    done();
+    console.log(fs.readdirSync(folderPath).length)
+    if (fs.readdirSync(folderPath).length === 0) {
+        document.getElementById('complete-message').innerText = 'no files :(';
+        document.getElementById('pop-backer-complete').classList.remove('hidden');
+    }
     fs.readdir(folderPath, (err, files) => {
         if (err) { throw err }
         let count = 0; // keep track of number of processed files
@@ -38,11 +42,4 @@ async function compile() {
             }
         });
     });
-}
-
-function done() {
-    if (fs.readdirSync(folderPath).length === 0) {
-        document.getElementById('complete-message').innerText = 'no files :(';
-        document.getElementById('pop-backer-complete').classList.remove('hidden');
-    }
 }

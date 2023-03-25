@@ -25,6 +25,9 @@ function _react(pressed) {
         shell.openPath(`${__dirname}/scouting-data-files`)
     } else if (pressed == 'pop-backer') {
         document.getElementById(pressed).classList.add('hidden');
+    } else if (pressed == 'pop-backer-complete') {
+        document.getElementById('complete-message').innerText = 'build complete!';
+        document.getElementById(pressed).classList.add('hidden');
     }
 }
 

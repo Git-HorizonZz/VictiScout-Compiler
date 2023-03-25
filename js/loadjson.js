@@ -44,7 +44,10 @@ async function load() {
             });
         });
         
-    } catch (err) { console.error(err) }
+    } catch (err) {
+        document.getElementById('complete-message').innerText = 'no build :(';
+        document.getElementById('pop-backer-complete').classList.remove('hidden');
+    }
     merge();
 }
 
@@ -93,7 +96,6 @@ function merge() {
         }
 
         // Autonomous Charging
-        console.log(child.children[5].innerHTML)
         if (child.children[5].innerHTML == 'D &amp; E') {
             teamData[team].dockAuton += 2;
         } else if (child.children[5].innerHTML == 'D &amp; not E') {

@@ -8,6 +8,7 @@ if (!fs.existsSync(`${__dirname}/analysis`)) { fs.mkdirSync(`${__dirname}/analys
 
 async function compile() {
     const outputJson = {}
+    done();
     fs.readdir(folderPath, (err, files) => {
         if (err) { throw err }
         let count = 0; // keep track of number of processed files
@@ -30,11 +31,18 @@ async function compile() {
                         // All files have been processed, write the merged data to the output JSON file
                         fs.writeFile(outputFile, JSON.stringify(outputJson), err => {
                             if (err) { throw err }
-                            console.log(`Merged data written to ${outputFile}`);
+                            document.getElementById('pop-backer-complete').classList.remove('hidden');
                         });
                     }
                 });
             }
         });
     });
+}
+
+function done() {
+    if (fs.readdirSync(folderPath).length === 0) {
+        document.getElementById('complete-message').innerText = 'no files :(';
+        document.getElementById('pop-backer-complete').classList.remove('hidden');
+    }
 }

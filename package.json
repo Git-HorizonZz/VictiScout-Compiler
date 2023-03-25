@@ -11,14 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/frc1418/VictiScout"
+        "url": "git+https://github.com/Git-HorizonZz/VictiScout-Compiler"
     },
     "author": "frc1418",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/frc1418/VictiScout/issues"
+        "url": "https://github.com/Git-HorizonZz/VictiScout-Compiler/issues"
     },
-    "homepage": "https://github.com/frc1418/VictiScout#readme",
+    "homepage": "https://github.com/Git-HorizonZz/VictiScout-Compiler#readme",
     "devDependencies": {
         "electron": "^22.1.0",
         "electron-packager": "^17.1.1",

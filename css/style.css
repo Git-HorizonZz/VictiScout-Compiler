@@ -9,7 +9,7 @@ td, th {
     padding: 8px;
 }
   
-tr:first-child {
+thead tr th {
     background-color: #d12727;
 }
 
@@ -17,15 +17,15 @@ tr {
     background-color: #333;
 }
 
-.averaged:not(:first-child):nth-child(even) {
+.averaged:nth-child(even) {
     background-color: #111;
 }
 
-.averaged:not(:first-child):nth-child(odd) {
+.averaged:nth-child(odd) {
     background-color: #222;
 }
 
-.averaged:not(:first-child):hover, tr:not(:first-child):hover {
+.averaged:hover, tr:hover {
     background-color: #444;
     cursor: pointer;
 }

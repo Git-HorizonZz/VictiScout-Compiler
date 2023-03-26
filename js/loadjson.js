@@ -139,7 +139,7 @@ function merge() {
                                       </tr>`);
     }
     // Clear old table
-    var tableHeaderRowCount = 1;
+    var tableHeaderRowCount = 0;
     var rowCount = TABLE.rows.length;
     for (var i = tableHeaderRowCount; i < rowCount; i++) {
         TABLE.deleteRow(tableHeaderRowCount);

@@ -7,6 +7,7 @@ Application for compiling scouting data collected using the [VictiScout](https:/
 ## Development Dependencies
 * [Node.js](https://nodejs.org)
 * [npm](https://npmjs.com)
+* [CSV](https://csv.js.org)
 
 ## Development Installation
 1. `cd` into `VictiScout` directory.

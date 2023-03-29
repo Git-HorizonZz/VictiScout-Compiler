@@ -3,6 +3,10 @@ table {
     width: 92%;
     margin: auto;
 }
+
+h1 {
+    font-size: 2.5em;
+}
   
 td, th {
     border: 1px solid #FFF;
@@ -48,6 +52,7 @@ tr {
 
 #buttons {
     margin-top: .7em;
+    margin-bottom: 1.2em;
 }
 
 input[type="file"] {
@@ -106,4 +111,30 @@ form {
 
 .hidden {
     display: none;
+}
+
+[name] {
+    position: relative;
+    -webkit-transition-delay: 1s;
+}
+
+[name]:after {
+    content: attr(name);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-54.5%) translateY(-45%);
+    background-color: #222;
+    padding-left: .3em;
+    padding-right: .3em;
+    padding-top: .1em;
+    padding-bottom: .1em;
+    width: max-content;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    -webkit-transition-delay: .2s;
+}
+
+[name]:hover:after {
+    opacity: 1;
 }

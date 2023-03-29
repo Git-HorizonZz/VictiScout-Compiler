@@ -27,6 +27,7 @@
     "dependencies": {
         "@abandonware/bleno": "git+https://github.com/BrandonWerbel/bleno.git",
         "@abandonware/noble": "git+https://github.com/abandonware/noble.git",
-        "csv-parser": "^3.0.0"
+        "csv-parser": "^3.0.0",
+        "sortable-tablesort": "^2.1.1"
     }
 }

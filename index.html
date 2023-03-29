@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>VictiScout Compiler</title>
+    <link href="./node_modules/sortable-tablesort/sortable.min.css" rel="stylesheet"/>
+    <script src="./node_modules/sortable-tablesort/sortable.min.js"></script>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/loadjson.js"></script>
@@ -13,18 +15,19 @@
 <body>
     <div id="base">
         <h1>VictiScout Compiler</h1>
-        <table id="table">
+        <table class="sortable" id="table">
             <thead>
                 <tr>
-                    <th>TEAM</th>
-                    <th>MATCH</th>
-                    <th>CONE T-M-L (A)</th>
-                    <th>CUBE T-M-L (A)</th>
-                    <th>LEAVE COMMUNITY (A)</th>
-                    <th>CHARGING DOCK (A)</th>
-                    <th>CONE T-M-L (T)</th>
-                    <th>CUBE T-M-L (T)</th>
-                    <th>CHARGING DOCK (T)</th>
+                    <th onclick="closeDrops()">TEAM</th>
+                    <th onclick="closeDrops()">MATCH</th>
+                    <th onclick="closeDrops()">CONES (A)</th>
+                    <th onclick="closeDrops()">CUBES (A)</th>
+                    <th onclick="closeDrops()">MOBILITY (A)</th>
+                    <th onclick="closeDrops()">CHARGE (A)</th>
+                    <th onclick="closeDrops()">CONES (T)</th>
+                    <th onclick="closeDrops()">CUBES (T)</th>
+                    <th onclick="closeDrops()">CHARGE (T)</th>
+                    <th onclick="closeDrops()">TOTAL</th>
                 </tr>
             </thead>
             <tbody id="tbody">

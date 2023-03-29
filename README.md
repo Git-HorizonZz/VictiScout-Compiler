@@ -8,11 +8,13 @@ Application for compiling scouting data collected using the [VictiScout](https:/
 * [Node.js](https://nodejs.org)
 * [npm](https://npmjs.com)
 * [CSV](https://csv.js.org)
+* [sortable](https://github.com/tofsjonas/sortable)
 
 ## Development Installation
 1. `cd` into `VictiScout` directory.
 2. Run `npm install` to install node dependencies.
 3. Run `npm install csv-parser` to install node's csv-parser.
+4. Run `npm install sortable-tablesort` to install tofsjonas's table sorter.
 
 ## Usage in Development
 While in `VictiScout` directory, run

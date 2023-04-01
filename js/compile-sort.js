@@ -11,7 +11,7 @@ async function compile() {
     console.log(fs.readdirSync(folderPath).length)
     if (fs.readdirSync(folderPath).length === 0) {
         document.getElementById('complete-message').innerText = 'no files :(';
-        document.getElementById('pop-backer-complete').classList.remove('hidden');
+        document.getElementById('pop-backer-complete').classList.add('show');
     }
     fs.readdir(folderPath, (err, files) => {
         if (err) { throw err }
@@ -35,7 +35,8 @@ async function compile() {
                         // All files have been processed, write the merged data to the output JSON file
                         fs.writeFile(outputFile, JSON.stringify(outputJson), err => {
                             if (err) { throw err }
-                            document.getElementById('pop-backer-complete').classList.remove('hidden');
+                            document.getElementById('pop-backer-complete').classList.add('show');
+                            console.log(document.getElementById('pop-backer-complete').className);
                         });
                     }
                 });

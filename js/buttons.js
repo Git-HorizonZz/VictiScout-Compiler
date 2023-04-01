@@ -9,13 +9,13 @@ function react(pressed) { _react(pressed) }
 
 function _react(pressed) {
     if (pressed == 'fil') {
-        document.getElementById('pop-backer').classList.remove('hidden');
+        document.getElementById('pop-backer').classList.add('show');
     } else if (pressed == 'ycl') {
-        document.getElementById('pop-backer').classList.add('hidden');
+        document.getElementById('pop-backer').classList.remove('show');
         emptyFolder();
         moveFiles();
     } else if (pressed == 'ncl') {
-        document.getElementById('pop-backer').classList.add('hidden');
+        document.getElementById('pop-backer').classList.remove('show');
         moveFiles();
     } else if (pressed == 'com') {
         compile();
@@ -27,7 +27,7 @@ function _react(pressed) {
         shell.openPath(`${__dirname}/scouting-data-files`)
     } else if (pressed == 'ypc') {
         document.getElementById('complete-message').innerText = 'build complete!';
-        document.getElementById('pop-backer-complete').classList.add('hidden');
+        document.getElementById('pop-backer-complete').classList.remove('show');
     }
 }
 

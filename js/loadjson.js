@@ -46,7 +46,7 @@ async function load() {
         
     } catch (err) {
         document.getElementById('complete-message').innerText = `${err}`;
-        document.getElementById('pop-backer-complete').classList.remove('hidden');
+        document.getElementById('pop-backer-complete').classList.add('show');
     }
     merge();
 }

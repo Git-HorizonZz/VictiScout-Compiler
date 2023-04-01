@@ -5,7 +5,7 @@ async function load() {
     // Reference to HTML table
     const TABLE = document.getElementById('tbody');
     // Clear old table
-    var tableHeaderRowCount = 1;
+    var tableHeaderRowCount = 0;
     var rowCount = TABLE.rows.length;
     for (var i = tableHeaderRowCount; i < rowCount; i++) {
         TABLE.deleteRow(tableHeaderRowCount);
@@ -78,14 +78,14 @@ function merge() {
 
         // Autonomous cones
         let coneAuto = child.children[2].innerHTML.split('-');
-        coneAuto.forEach((v, i) => { coneAuto[i] = parse(v, true) });
+        coneAuto.forEach((v, i) => { coneAuto[i] = parseInt(v) });
         teamData[team].conesAuton[0] += coneAuto[0];
         teamData[team].conesAuton[1] += coneAuto[1];
         teamData[team].conesAuton[2] += coneAuto[2];
 
         // Autonomous cubes
         let cubeAuto = child.children[3].innerHTML.split('-');
-        cubeAuto.forEach((v, i) => { cubeAuto[i] = parse(v, true) });
+        cubeAuto.forEach((v, i) => { cubeAuto[i] = parseInt(v) });
         teamData[team].cubesAuton[0] += cubeAuto[0];
         teamData[team].cubesAuton[1] += cubeAuto[1];
         teamData[team].cubesAuton[2] += cubeAuto[2];
@@ -106,14 +106,14 @@ function merge() {
 
         // Teleop Cones
         let coneTele = child.children[6].innerHTML.split('-');
-        coneTele.forEach((v, i) => { coneTele[i] = parse(v, true) });
+        coneTele.forEach((v, i) => { coneTele[i] = parseInt(v) });
         teamData[team].conesDriver[0] += coneTele[0];
         teamData[team].conesDriver[1] += coneTele[1];
         teamData[team].conesDriver[2] += coneTele[2];
 
         // Teleop Cubes
         let cubeTele = child.children[7].innerHTML.split('-');
-        cubeTele.forEach((v, i) => { cubeTele[i] = parse(v, true) });
+        cubeTele.forEach((v, i) => { cubeTele[i] = parseInt(v) });
         teamData[team].cubesDriver[0] += cubeTele[0];
         teamData[team].cubesDriver[1] += cubeTele[1];
         teamData[team].cubesDriver[2] += cubeTele[2];
@@ -177,7 +177,7 @@ function merge() {
             let avcu_auto = (teamData[team].cubesAuton[0]+teamData[team].cubesAuton[1]+teamData[team].cubesAuton[2]);
             let avco_tele = (teamData[team].conesDriver[0]+teamData[team].conesDriver[1]+teamData[team].conesDriver[2]);
             let avcu_tele = (teamData[team].cubesDriver[0]+teamData[team].cubesDriver[1]+teamData[team].cubesDriver[2]);
-            let total = (parse(avco_auto)+parse(avco_tele)+parse(avcu_auto)+parse(avcu_tele)+parse(teamData[team].leaveComm)+parse(teamData[team].dockAuton)+parse(teamData[team].dockTeleop));
+            let total = (parseFloat(avco_auto)+parseFloat(avco_tele)+parseFloat(avcu_auto)+parseFloat(avcu_tele)+parseFloat(teamData[team].leaveComm)+parseFloat(teamData[team].dockAuton)+parseFloat(teamData[team].dockTeleop));
             TABLE.innerHTML += `<tr class="averaged" id="M${team}" onclick="dropdowntoggle(${team})">
                                     <td>${teamData[team].number}</td> 
                                     <td>${teamData[team].count}</td>
@@ -216,14 +216,3 @@ function dropdowntoggle(team) {
         teamData[team].dropped = false;
     }
 }
-
-// function avgRecalc(team, remove) {
-//     const toRecalc = document.getElementById(`M${team}`);
-//     var matches = document.querySelectorAll(`.T${team}`);
-//     matches.forEach((v) => { if(v != remove) { console.log(v) } });
-//     finish later     //
-// }
-
-function parse(str) { return parseFloat(str) }
-
-function parse(str, int) { return parseInt(str) }

@@ -1,4 +1,4 @@
-# // put logo here //
+[<img src="images/readme/header.png" align="center" alt="VictiScout Compiler">](https://github.com/Git-HorizonZz/VictiScout-Compiler)
 
 Application for compiling scouting data collected using the [VictiScout](https://github.com/frc1418/VictiScout/releases) Application. Written using [Electron](http://electron.atom.io/) for easy customization.
 

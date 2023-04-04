@@ -2,7 +2,7 @@
 
 Application for compiling scouting data collected using the [VictiScout](https://github.com/frc1418/VictiScout/releases) Application. Written using [Electron](http://electron.atom.io/) for easy customization.
 
-// put release here //
+Newest release: [here](https://github.com/Git-HorizonZz/VictiScout-Compiler/releases)
 
 ## Development Dependencies
 * [Node.js](https://nodejs.org)

@@ -8,14 +8,10 @@ Newest release: [here](https://github.com/Git-HorizonZz/VictiScout-Compiler/rele
 * [Node.js](https://nodejs.org)
 * [npm](https://npmjs.com)
 * [CSV](https://csv.js.org)
-* [sortable](https://github.com/tofsjonas/sortable)
 
 ## Development Installation
 1. `cd` into `VictiScout` directory.
 2. Run `npm install` to install node dependencies.
-3. Run `npm install csv-parser` to install node's csv-parser.
-4. Run `npm install sortable-tablesort` to install tofsjonas's table sorter.
-5. Replace contents of `node_modules/sortable-tablesort/sortable.min.css` with that of `newsortable.txt`.
 
 ## Usage in Development
 While in `VictiScout` directory, run

@@ -1,1 +1,0 @@
-.sortable th::after{content:"▸"}.sortable th.dir-d::after{content:"▾"}.sortable th.dir-u::after{content:"▴"}.sortable th.indicator-left::before{content:"▸"}.sortable th.indicator-left.dir-d::before{content:"▾"}.sortable th.indicator-left.dir-u::before{content:"▴"}
